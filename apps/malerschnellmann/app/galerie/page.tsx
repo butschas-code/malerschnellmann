@@ -93,7 +93,7 @@ export default function GaleriePage() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.25, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="flex gap-1 mt-14"
+            className="flex flex-wrap gap-2 mt-10 md:mt-14"
           >
             {categories.map((cat) => (
               <button
@@ -119,7 +119,7 @@ export default function GaleriePage() {
       <section className="bg-[#1A1714] px-4 md:px-8 pb-24 pt-6">
         <motion.div
           layout
-          className="columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3"
+          className="columns-2 md:columns-3 lg:columns-4 gap-2 md:gap-3 space-y-2 md:space-y-3"
         >
           <AnimatePresence mode="popLayout">
             {filtered.map((img, i) => (
@@ -134,7 +134,7 @@ export default function GaleriePage() {
                   delay: Math.min(i * 0.04, 0.5),
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="relative break-inside-avoid overflow-hidden cursor-zoom-in group mb-3"
+                className="relative break-inside-avoid overflow-hidden cursor-zoom-in group mb-2 md:mb-3"
                 style={{ aspectRatio: aspectRatio(i) }}
                 onClick={() => setLightbox(i)}
               >
@@ -227,7 +227,7 @@ export default function GaleriePage() {
               <button
                 onClick={() => setLightbox(p => p !== null ? Math.max(0, p - 1) : null)}
                 disabled={lightbox === 0}
-                className="flex items-center gap-2 text-sm font-sans text-white/50 hover:text-white disabled:opacity-20 transition-colors min-w-[80px] justify-center py-2"
+                className="flex items-center gap-2 text-sm font-sans text-white/50 hover:text-white disabled:opacity-20 transition-colors min-w-[64px] md:min-w-[80px] justify-center py-3 min-h-[44px]"
               >
                 ← Zurück
               </button>
@@ -252,7 +252,7 @@ export default function GaleriePage() {
               <button
                 onClick={() => setLightbox(p => p !== null ? Math.min(filtered.length - 1, p + 1) : null)}
                 disabled={lightbox === filtered.length - 1}
-                className="flex items-center gap-2 text-sm font-sans text-white/50 hover:text-white disabled:opacity-20 transition-colors min-w-[80px] justify-center py-2"
+                className="flex items-center gap-2 text-sm font-sans text-white/50 hover:text-white disabled:opacity-20 transition-colors min-w-[64px] md:min-w-[80px] justify-center py-3 min-h-[44px]"
               >
                 Weiter →
               </button>

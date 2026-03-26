@@ -96,7 +96,7 @@ export default function LeistungenPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className={`relative w-full lg:w-[45%] flex flex-col justify-center px-8 md:px-14 lg:px-16 py-16 overflow-hidden ${
+              className={`relative w-full lg:w-[45%] flex flex-col justify-center px-6 md:px-12 lg:px-16 py-12 md:py-16 overflow-hidden ${
                 i % 2 === 0 ? "bg-[#1A1714]" : "bg-[#2D2520]"
               }`}
             >
@@ -145,7 +145,7 @@ export default function LeistungenPage() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
-        className="bg-[#2D5A3D] py-20 px-6 md:px-14"
+        className="bg-[#2D5A3D] py-14 md:py-20 px-6 md:px-14"
       >
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center gap-8">
           <div className="flex-1">

@@ -13,7 +13,7 @@ export function Ablauf() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20 md:mb-24"
+          className="mb-12 md:mb-20"
         >
           <div className="flex items-center gap-4 mb-5">
             <span className="block w-8 h-px bg-[#C8551A]" />

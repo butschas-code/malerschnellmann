@@ -16,7 +16,7 @@ export function Statement() {
   return (
     <section
       ref={ref}
-      className="relative bg-[#F5EFE3] py-24 md:py-36 overflow-hidden select-none"
+      className="relative bg-[#F5EFE3] py-16 md:py-36 overflow-hidden select-none"
     >
       {/* Big background number */}
       <div

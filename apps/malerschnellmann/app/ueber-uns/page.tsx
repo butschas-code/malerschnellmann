@@ -158,7 +158,7 @@ export default function UeberUnsPage() {
 
 
       {/* CTA */}
-      <div className="bg-[#C8551A] py-20 px-6 lg:px-12 text-center">
+      <div className="bg-[#C8551A] py-14 md:py-20 px-6 lg:px-12 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

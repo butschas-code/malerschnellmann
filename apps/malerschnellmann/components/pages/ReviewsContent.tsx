@@ -110,10 +110,10 @@ export function ReviewsContent() {
             <h1 className="font-serif text-display text-white leading-[0.95] mb-10 max-w-3xl">
               Was unsere <span className="text-[#C8551A]">Kunden sagen.</span>
             </h1>
-            <div className="flex items-center gap-6">
-              <span className="font-serif text-7xl text-white leading-none"><CountUp to={averageRating}/></span>
+            <div className="flex items-center flex-wrap gap-4 md:gap-6">
+              <span className="font-serif text-5xl md:text-7xl text-white leading-none"><CountUp to={averageRating}/></span>
               <div className="space-y-2">
-                <StarRow rating={5} color="#C8551A" size={22}/>
+                <StarRow rating={5} color="#C8551A" size={20}/>
                 <p className="font-sans text-[#7A7068] text-sm">{reviews.length} Google Bewertungen</p>
               </div>
             </div>
@@ -125,7 +125,7 @@ export function ReviewsContent() {
       <Marquee/>
 
       {/* ── Cards ─────────────────────────────────────────── */}
-      <section className="bg-[#111109] px-4 md:px-8 py-10">
+      <section className="bg-[#111109] px-3 sm:px-4 md:px-8 py-8 md:py-10">
         <div className="max-w-7xl mx-auto">
 
           {/* Asymmetric grid */}

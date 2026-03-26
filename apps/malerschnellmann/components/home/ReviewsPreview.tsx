@@ -11,7 +11,7 @@ export function ReviewsPreview() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative bg-[#F5EFE3] py-24 md:py-36 overflow-hidden">
+    <section className="relative bg-[#F5EFE3] py-16 md:py-36 overflow-hidden">
       {/* Giant quote mark */}
       <div
         className="absolute top-0 right-8 md:right-16 font-serif text-[22vw] text-[#E4DDD4] leading-none pointer-events-none select-none"
@@ -113,7 +113,7 @@ export function ReviewsPreview() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="mt-20 pt-10 border-t border-[#E4DDD4] flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+          className="mt-12 md:mt-20 pt-8 md:pt-10 border-t border-[#E4DDD4] flex flex-col md:flex-row md:items-center md:justify-between gap-6"
         >
           <div className="flex items-center gap-4">
             <span className="font-serif text-5xl text-[#1A1714]">{averageRating.toFixed(1)}</span>
