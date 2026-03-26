@@ -1,0 +1,129 @@
+/*
+  Style DNA – Maler Schnellmann Zug  v2
+  ──────────────────────────────────────
+  Mood:       Atelier · Präzision · Drama
+  Fonts:      DM Serif Display (headings) + Inter (body/labels)
+  Palette:    Ink #1A1714 · Linen #F5EFE3 · Brand #C8551A · Cream #FDFAF5
+  Texture:    SVG noise grain on hero; raw linen on light sections
+  Motif:      Typography AS art — oversized numbers, editorial margins
+*/
+
+@import "tailwindcss";
+
+@theme {
+  --color-brand:       #C8551A;
+  --color-brand-dark:  #A33E0E;
+  --color-brand-light: #F0D5C5;
+  --color-ink:         #1A1714;
+  --color-ink-mid:     #3D3632;
+  --color-ink-muted:   #7A7068;
+  --color-linen:       #F5EFE3;
+  --color-cream:       #FDFAF5;
+  --color-warm-gray:   #E4DDD4;
+  --color-forest:      #2D5A3D;
+
+  --font-serif: "DM Serif Display", Georgia, serif;
+  --font-sans:  "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: #FDFAF5;
+    color: #1A1714;
+    overflow-x: hidden;
+  }
+
+  h1,h2,h3,h4 { font-family: var(--font-serif); }
+
+  ::selection { background: #C8551A; color: #fff; }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #1A1714; }
+  ::-webkit-scrollbar-thumb { background: #C8551A; }
+}
+
+@layer utilities {
+  .font-serif  { font-family: var(--font-serif); }
+  .font-sans   { font-family: var(--font-sans); }
+
+  /* Editorial display sizes */
+  .text-display {
+    font-size: clamp(3.5rem, 8vw, 9rem);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+  }
+  .text-headline {
+    font-size: clamp(2.5rem, 5vw, 6rem);
+    line-height: 1.0;
+    letter-spacing: -0.015em;
+  }
+  .text-title {
+    font-size: clamp(1.75rem, 3vw, 3.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  /* Label style */
+  .label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-family: var(--font-sans);
+  }
+
+  /* Grain noise overlay */
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.055;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    z-index: 10;
+  }
+
+  /* Magnetic button base */
+  .magnetic {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .magnetic::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: currentColor;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Horizontal scroll container */
+  .h-scroll {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+    user-select: none;
+  }
+  .h-scroll::-webkit-scrollbar { display: none; }
+  .h-scroll:active { cursor: grabbing; }
+}
