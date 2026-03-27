@@ -16,7 +16,7 @@ const wordVariants = {
     transition: {
       delay: 0.3 + i * 0.12,
       duration: 0.75,
-      ease: [0.16, 1, 0.3, 1],
+      ease: [0.16, 1, 0.3, 1] as const,
     },
   }),
 };
@@ -25,7 +25,7 @@ const lineVariants = {
   hidden: { scaleX: 0 },
   visible: {
     scaleX: 1,
-    transition: { delay: 0.9, duration: 1.1, ease: [0.16, 1, 0.3, 1] },
+    transition: { delay: 0.9, duration: 1.1, ease: [0.16, 1, 0.3, 1] as const },
   },
 };
 
