@@ -1,6 +1,5 @@
 {
   "buildCommand": "pnpm run build",
   "outputDirectory": "apps/malerschnellmann/.next",
-  "framework": "nextjs",
-  "installCommand": "pnpm install"
+"installCommand": "pnpm install"
 }
