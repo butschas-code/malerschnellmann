@@ -1,5 +1,0 @@
-{
-  "buildCommand": "pnpm run build",
-  "outputDirectory": "apps/malerschnellmann/.next",
-"installCommand": "pnpm install"
-}
